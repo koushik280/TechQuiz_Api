@@ -13,6 +13,7 @@ import { quizRoute } from "./routes/quiz.js";
 
 import { analyticsRoutes } from "./routes/analytics.js";
 import { adminAnalyticsRoutes } from "./routes/admin/analytics.js";
+import technologyRoutes from './routes/technologies.js'
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ app.use("/api/quiz", quizRoute);
 
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/admin/analytics", adminAnalyticsRoutes);
+app.use('/api/technologies', technologyRoutes);
 
 //Base route for health checks
 app.use(

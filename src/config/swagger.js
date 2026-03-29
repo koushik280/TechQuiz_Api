@@ -104,6 +104,7 @@ const options = {
     "./src/routes/authroutes.js",
     "./src/routes/quiz.js",
     "./src/routes/analytics.js",
+    "./src/routes/technologies.js",
     "./src/routes/admin/technologies.js",
     "./src/routes/admin/levelConfigs.js",
     "./src/routes/admin/questions.js",
