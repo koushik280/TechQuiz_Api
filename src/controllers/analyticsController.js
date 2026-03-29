@@ -13,7 +13,7 @@ class AnalyticsController {
       const attempts = (
         await Attemp.find({ user: userId }).populate("technology", "name")
       )
-        .sort({ submittedAt: -1 })
+        .sort("-submittedAt")
         .skip(skip)
         .limit(parseInt(limit))
         .lean();
@@ -123,6 +123,5 @@ class AnalyticsController {
   }
 }
 
-
-const AnalyticsContrl=new AnalyticsController();
-export {AnalyticsContrl};
+const AnalyticsContrl = new AnalyticsController();
+export { AnalyticsContrl };
