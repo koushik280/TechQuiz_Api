@@ -122,8 +122,8 @@ class UserController {
       const isProduction = process.env.NODE_ENV === "production";
       res.cookie("accessToken", newAccessToken, {
         httpOnly: true,
-        secure: isProduction,
-        sameSite: "strict",
+        secure: true,
+        sameSite: "none",
         maxAge: 15 * 60 * 1000,
       });
 
