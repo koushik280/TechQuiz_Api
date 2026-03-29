@@ -61,7 +61,7 @@ class UserController {
       const accessToken = generateAcessToken(paylod);
       const refereshToken = generateRefreshToken(paylod);
 
-      const isProducation = process.env.NODE_ENV === "production";
+      //const isProducation = process.env.NODE_ENV === "production";
 
       res.cookie("accessToken", accessToken, {
         httpOnly: true,
@@ -119,7 +119,7 @@ class UserController {
 
       const newAccessToken = generateAcessToken(payload);
 
-      const isProduction = process.env.NODE_ENV === "production";
+      //const isProduction = process.env.NODE_ENV === "production";
       res.cookie("accessToken", newAccessToken, {
         httpOnly: true,
         secure: true,
