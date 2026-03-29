@@ -66,13 +66,13 @@ class UserController {
       res.cookie("accessToken", accessToken, {
         httpOnly: true,
         secure: true,
-        samesite: "none",
+        sameSite: "none",
         maxAge: 15 * 60 * 1000,
       });
       res.cookie("refreshToken", refereshToken, {
         httpOnly: true,
         secure: true,
-        samesite: "none",
+        sameSite: "none",
         maxAge: 7 * 24 * 60 * 60 * 1000,
       });
       res.status(200).json({
